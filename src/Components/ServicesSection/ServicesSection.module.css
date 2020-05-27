@@ -1,0 +1,10 @@
+.ServicesSection{
+    height: 610px;
+    width:80vw;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 120px;
+}
