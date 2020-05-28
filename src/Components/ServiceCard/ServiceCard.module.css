@@ -14,6 +14,18 @@
     left: 20px;
 }
 
+.Image {
+    width: 95%;
+    height: 90%;
+}
+.Image img {
+    margin-left: 5px;
+    padding-top: 5px;
+    width: 100%;
+    height: 80%;
+    aspect-ratio: 1;
+}
+
 .ServiceCard:hover {
     transition: all 0.2s linear;
     box-shadow: 0 5px 15px hsla(0, 0%, 0%, 0.2);

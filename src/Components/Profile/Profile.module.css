@@ -1,5 +1,29 @@
 .Profile_container{
-    min-height: 500px;
-    width: 100vw;
+    min-height: 400px;
+    width: 1200px;
     background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 } 
+
+.Image_container {
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+.Image_container img {
+    height: 300px;
+    margin-left: 40px;
+    border-radius: 20%;
+}
+
+.Profile_description {
+    width: 500px;
+    margin-left: 50px;
+    border: 2px solid #eee;
+}
+
+.Heading {
+    margin-left: 130px;
+}
