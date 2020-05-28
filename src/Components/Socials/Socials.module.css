@@ -1,0 +1,17 @@
+.Socials{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50px;
+    justify-content: center;
+}
+
+.Socials img{
+    height: 40px;
+}
+
+.linkedin{
+    height: 36px !important;
+    margin-top: 5px;
+}
