@@ -12,7 +12,9 @@
 .Container p{
     width: 300px;
     margin-left: 100px;
-    font-size: 17px;
+    line-height: 26px;
+    font-size: 16px;
+    color: rgb(36, 36, 36);
 }
 .Container h1{
     margin-top: 150px;
@@ -36,7 +38,7 @@
     transition: all 0.2s linear;
     width: 400px;
     border-radius: 10px;
-    border: 2px solid #76A328;
+    /* border: 2px solid #76A328; */
 }
 
 .BeforeIMagethree{

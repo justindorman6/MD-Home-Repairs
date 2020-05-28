@@ -8,9 +8,11 @@ const ServiceCard = (props) => {
     return (
         <div className={classes.ServiceCard}>
             <div className={classes.Image}>
-                <img src={props.image} />
+                <img src={props.image} alt="service" />
             </div>
-            <h3>{props.title}</h3>
+            <div className={classes.Title}>
+                <h3>{props.title}</h3>
+            </div>
         </div>
     )
 }

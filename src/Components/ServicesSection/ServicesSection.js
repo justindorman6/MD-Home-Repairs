@@ -12,23 +12,16 @@ import waterproofing from '../../assets/images/waterproofing.jpg';
 import plumbing from '../../assets/images/plumbing.jpg';
 import carpenting from '../../assets/images/carpenting.jpeg';
 
-
-
 const ServicesSection = () => {
     const services = [{ title: "Tiling", image: tiling }, { title: "Painting", image: painting }, { title: "Paving", image: paving }, { title: "Plastering", image: plastering },
     { title: "High Pressure Roof Cleaning", image: roof_cleaning }, { title: "Brick laying", image: brick_laying }, { title: "Electrical", image: electrical }, { title: "Water Proofing", image: waterproofing }, { title: "Plumbing", image: plumbing },
     { title: "Carpenting", image: carpenting }].map(service =>
-        <ServiceCard title={service.title} image={service.image} />)
+        <ServiceCard key={service.title} title={service.title} image={service.image} />)
+        
     return (
-        <React.Fragment>
-            <div className={classes.Heading}>
-                <h1>Services Offered</h1>
-            </div>
-            <div className={classes.ServicesSection}>
-                {services}
-            </div>
-        </React.Fragment>
-
+        <div className={classes.ServicesSection}>
+            {services}
+        </div>
     )
 }
 export default ServicesSection

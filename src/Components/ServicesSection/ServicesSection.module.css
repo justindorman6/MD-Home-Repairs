@@ -1,12 +1,14 @@
 .ServicesSection{
-    height: 610px;
-    width:1200px;
+    height: 800px;
+    width:70%;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    margin-right: -50px;
     margin: 40px auto;
+    
 }
 
 .Heading {

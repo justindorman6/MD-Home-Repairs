@@ -47,7 +47,7 @@ const BeforeandAfter = () => {
 
                 <div className={classes.ImageContainer}>
                     <div className={classes.SubImage}>
-                        {!state.three ? <img className={classes.BeforeIMagethree} src={Before3} alt="before 3" /> : <img src={After3} alt="after 3" />}
+                        {!state.three ? <img className={classes.BeforeIMagethree} src={Before3} alt="before 3" /> : <img className={classes.BeforeIMagethree} src={After3} alt="after 3" />}
                     </div>
 
                     <div className={classes.Buttons}>
