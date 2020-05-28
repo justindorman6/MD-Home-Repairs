@@ -1,11 +1,12 @@
 .HeroSectionContainer {
     height: 350px;
     width: 100vw;
-    background-color: #76A328;
+    background-color: #F9FAFC;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .HeroSectionContainer h1 {
