@@ -26,11 +26,7 @@ const ContactUs = (props) => {
 
     const send = (e) => {
         e.preventDefault()
-        recaptchaRef.current.execute()
-    }
-
-    const onResolved = () => {
-        const template_params = {
+        const params = {
             "from_email": info.email,
             "reply_to": info.email,
             "from_name": info.firstname + " " + info.lastname,
@@ -38,22 +34,19 @@ const ContactUs = (props) => {
             "number": info.phoneNumber.length > 0 ? info.phoneNumber : "No number provided",
             "job_type": info.typeOfJob
         }
+        // recaptchaRef.current.execute()
 
-        emailjs.send('gmail', 'template_a23K7w3c', template_params, 'user_4IOyMIUtvLImbAjtsbKqc')
+        emailjs.send('gmail', 'template_a23K7w3c', params, 'user_4IOyMIUtvLImbAjtsbKqc')
             .then((result) => {
                 setResponse("Successfully sent!")
             }, (error) => {
-                console.log("Something went wrong.");
+                setResponse("Something went wrong.");
             });
-    }
-
-    const onError = () => {
-        setResponse("Something happened, ReCAPTCHA says you are a bot.")
     }
 
     return (
         <div className={classes.ContactUs}>
-            <form className={classes.Form}>
+            <div className={classes.Form}>
 
                 <div className={classes.Name}>
                     <div>
@@ -79,14 +72,14 @@ const ContactUs = (props) => {
                 <div className={classes.ButtonContainer}>
                     <p>{response}</p>
                     <button onClick={send}>Send</button>
-                    <Recaptcha
+                    {/* <Recaptcha
                         ref={recaptchaRef}
                         sitekey={"6LcnUv0UAAAAAMEDrNY4qJk2K4T0QsRAk28KPDtp"}
                         onResolved={onResolved}
-                        onError={onError} />
+                        onError={onError} /> */}
                 </div>
 
-            </form>
+            </div>
 
             <div className={classes.Copy}>
                 <h1>ContactUs</h1>
