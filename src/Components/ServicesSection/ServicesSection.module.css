@@ -6,11 +6,20 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    margin-right: -50px;
-    margin: 40px auto;
     
+    margin: 40px auto;
+    margin-right: 50px;
 }
 
 .Heading {
     margin-left: 130px;
+}
+
+.Container{
+    display: flex;
+}
+
+.Copy{
+    margin-top: 150px;
+    margin-left:100px;
 }

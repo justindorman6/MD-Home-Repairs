@@ -17,10 +17,17 @@ const ServicesSection = () => {
     { title: "High Pressure Roof Cleaning", image: roof_cleaning }, { title: "Brick laying", image: brick_laying }, { title: "Electrical", image: electrical }, { title: "Water Proofing", image: waterproofing }, { title: "Plumbing", image: plumbing },
     { title: "Carpenting", image: carpenting }].map(service =>
         <ServiceCard key={service.title} title={service.title} image={service.image} />)
-        
+
     return (
-        <div className={classes.ServicesSection}>
-            {services}
+        <div className={classes.Container}>
+            <div className={classes.Copy}>
+                <h1>Services</h1>
+                <p>These are the types of services that we provide.</p>
+            </div>
+            <div className={classes.ServicesSection}>
+
+                {services}
+            </div>
         </div>
     )
 }
