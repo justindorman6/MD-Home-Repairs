@@ -2,7 +2,6 @@ import React from 'react';
 import Header from './Components/Header/Header'
 import HeroSection from './Components/HeroSection/HeroSection'
 import ServicesSection from './Components/ServicesSection/ServicesSection'
-import Socials from './Components/Socials/Socials'
 import BeforeandAfter from './Components/BeforeandAfter/BeforeandAfter'
 import Profile from './Components/Profile/Profile'
 import ContactUs from './Components/ContactUs/ContactUs'
@@ -14,7 +13,7 @@ const App = () => {
       <Header />
       <HeroSection />
       <ServicesSection />
-      <Socials />
+      {/* <Socials /> */}
       <BeforeandAfter />
       <Profile />
       <ContactUs />
