@@ -5,6 +5,7 @@ import ServicesSection from './Components/ServicesSection/ServicesSection'
 import Socials from './Components/Socials/Socials'
 import BeforeandAfter from './Components/BeforeandAfter/BeforeandAfter'
 import Profile from './Components/Profile/Profile'
+import ContactUs from './Components/ContactUs/ContactUs'
 import classes from './App.module.css'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
       <Socials />
       <BeforeandAfter />
       <Profile />
+      <ContactUs />
     </div>
   );
 }
