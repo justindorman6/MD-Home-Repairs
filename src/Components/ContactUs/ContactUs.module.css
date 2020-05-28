@@ -46,6 +46,11 @@
 .ButtonContainer{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.ButtonContainer p{
+    font-size: 17px;
 }
 
 .Form button{
@@ -59,6 +64,7 @@
     font-weight: 600px;
     background-color: #76A328;
     color:white;
+    margin-left: 20px;
 }
 .Name{
     display: flex;

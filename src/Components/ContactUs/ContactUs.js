@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import classes from './ContactUs.module.css'
 import emailjs from 'emailjs-com';
 import Socials from '../Socials/Socials'
-const ContactUs = () => {
+import Recaptcha from 'react-google-invisible-recaptcha'
+
+const ContactUs = (props) => {
+    const recaptchaRef = React.createRef();
+    const [response, setResponse] = useState("")
 
     const [info, setInfo] = useState({
         email: "",
@@ -10,8 +14,7 @@ const ContactUs = () => {
         lastname: "",
         phoneNumber: "",
         typeOfJob: "",
-        message: "",
-        feedback: ""
+        message: ""
     })
 
     const onChangeHandler = (e) => {
@@ -21,8 +24,12 @@ const ContactUs = () => {
         })
     }
 
-    function sendEmail(e) {
-        e.preventDefault();
+    const send = (e) => {
+        e.preventDefault()
+        recaptchaRef.current.execute()
+    }
+
+    const onResolved = () => {
         const template_params = {
             "from_email": info.email,
             "reply_to": info.email,
@@ -31,18 +38,22 @@ const ContactUs = () => {
             "number": info.phoneNumber.length > 0 ? info.phoneNumber : "No number provided",
             "job_type": info.typeOfJob
         }
+
         emailjs.send('gmail', 'template_a23K7w3c', template_params, 'user_4IOyMIUtvLImbAjtsbKqc')
             .then((result) => {
-                console.log(result.text);
+                setResponse("Successfully sent!")
             }, (error) => {
-                console.log(error.text);
+                console.log("Something went wrong.");
             });
     }
 
+    const onError = () => {
+        setResponse("Something happened, ReCAPTCHA says you are a bot.")
+    }
 
     return (
         <div className={classes.ContactUs}>
-            <form className={classes.Form} onSubmit={sendEmail}>
+            <form className={classes.Form}>
 
                 <div className={classes.Name}>
                     <div>
@@ -66,8 +77,15 @@ const ContactUs = () => {
                 <label>Message</label>
                 <textarea id="message" required onChange={onChangeHandler} />
                 <div className={classes.ButtonContainer}>
-                    <button type="submit">Send</button>
+                    <p>{response}</p>
+                    <button onClick={send}>Send</button>
+                    <Recaptcha
+                        ref={recaptchaRef}
+                        sitekey={"6LcnUv0UAAAAAMEDrNY4qJk2K4T0QsRAk28KPDtp"}
+                        onResolved={onResolved}
+                        onError={onError} />
                 </div>
+
             </form>
 
             <div className={classes.Copy}>
@@ -75,7 +93,7 @@ const ContactUs = () => {
                 <p>We are expecting your email so please do not hesitate to contact us through this channel or you may call on the number,
                 or if that does it do it for you please go look at our social media. You can contact us there as well.</p>
             </div>
-            <Socials/>
+            <Socials />
         </div>
     )
 }
