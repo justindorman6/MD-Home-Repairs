@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import classes from './ContactUs.module.css'
 import emailjs from 'emailjs-com';
 import Socials from '../Socials/Socials'
+import Spinner from '../../Components/Spinner/Spinner';
 import Recaptcha from 'react-google-invisible-recaptcha'
+
 
 const ContactUs = (props) => {
     const recaptchaRef = React.createRef();
@@ -17,6 +19,8 @@ const ContactUs = (props) => {
         message: ""
     })
 
+    const [isLoading, toggleLoading] = useState(false);
+
     const onChangeHandler = (e) => {
         setInfo({
             ...info,
@@ -25,6 +29,7 @@ const ContactUs = (props) => {
     }
 
     const send = (e) => {
+        toggleLoading(true);
         e.preventDefault()
         const params = {
             "from_email": info.email,
@@ -38,14 +43,21 @@ const ContactUs = (props) => {
 
         emailjs.send('gmail', 'template_a23K7w3c', params, 'user_4IOyMIUtvLImbAjtsbKqc')
             .then((result) => {
-                setResponse("Successfully sent!")
+                setResponse("Successfully sent!");
+                toggleLoading(false);
             }, (error) => {
                 setResponse("Something went wrong.");
+                toggleLoading(false);
             });
     }
 
-    return (
-        <div className={classes.ContactUs}>
+    let contact = null;
+
+    if (isLoading) {
+        contact = <Spinner />;
+    }
+    else {
+        contact =
             <div className={classes.Form}>
 
                 <div className={classes.Name}>
@@ -73,13 +85,20 @@ const ContactUs = (props) => {
                     <p>{response}</p>
                     <button onClick={send}>Send</button>
                     {/* <Recaptcha
-                        ref={recaptchaRef}
-                        sitekey={"6LcnUv0UAAAAAMEDrNY4qJk2K4T0QsRAk28KPDtp"}
-                        onResolved={onResolved}
-                        onError={onError} /> */}
+                ref={recaptchaRef}
+                sitekey={"6LcnUv0UAAAAAMEDrNY4qJk2K4T0QsRAk28KPDtp"}
+                onResolved={onResolved}
+                onError={onError} /> */}
                 </div>
 
             </div>
+
+    }
+
+    return (
+        <div className={classes.ContactUs}>
+
+            {contact}
 
             <div className={classes.Copy}>
                 <h1>ContactUs</h1>
