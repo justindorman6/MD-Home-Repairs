@@ -1,5 +1,7 @@
 .ContactUs{
     height: 500px;
+    width: 100vw;
+    overflow: hidden;
     background-color: #F9FAFC;
     padding: 60px 80px;
     padding-left: 200px;
@@ -96,4 +98,100 @@
 
 .Copy h1{
     font-weight: 900;
+}
+
+@media only screen and (max-width: 1400px) {
+    .ContactUs{
+        padding: 60px 80px;
+    }
+    .Form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    
+    .Form label{
+        font-size: 13px;
+        letter-spacing: 1.1px;
+        margin-bottom: 6px;
+    }
+    
+    .Form input{
+        width: 100%;
+        margin-bottom: 18px;
+        height: 36px;
+        outline:none;
+        border:1px solid #ccc;
+        border-radius: 4px;
+        padding: 15px 15px;
+        font-size: 15px;
+        box-sizing: border-box;
+    }
+    
+    .Form textarea{
+        min-width: 100%;
+        max-width: 100%;
+        margin-bottom: 18px;
+        min-height: 100px;
+        outline:none;
+        border:1px solid #ccc;
+        border-radius: 4px;
+        padding: 15px 20px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+    
+    .ButtonContainer{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    .ButtonContainer p{
+        font-size: 17px;
+    }
+    
+    .Form button{
+        width: 150px;
+        height: 34px;
+        border-radius: 4px;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 600px;
+        background-color: #76A328;
+        color:white;
+        margin-left: 20px;
+    }
+    .Name{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .Name input{
+        width: 100%;
+    }
+    
+    .Name div{
+        display: flex;
+        flex-direction: column;
+        width: 48%;
+    }
+    
+    .Copy{
+        width: 30%;
+        margin: 30px;
+        margin-left: 120px;
+    }
+    .Copy p{
+        line-height: 24px;
+        font-size: 15px;
+        color: rgb(36, 36, 36);;
+    }
+    
+    .Copy h1{
+        font-weight: 900;
+    }
 }
