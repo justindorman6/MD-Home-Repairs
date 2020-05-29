@@ -4,6 +4,7 @@ import emailjs from 'emailjs-com';
 import Socials from '../Socials/Socials'
 import Spinner from '../../Components/Spinner/Spinner';
 import Recaptcha from 'react-google-invisible-recaptcha'
+import Modal from '../../Components/Modal/Modal';
 
 
 const ContactUs = (props) => {
@@ -19,36 +20,113 @@ const ContactUs = (props) => {
         message: ""
     })
 
+    const [validation, setValidation] = useState({
+        email: false,
+        firstname: false,
+        lastname: false,
+        phoneNumber: false,
+        typeOfJob: false,
+        message: false,
+        formValid: false
+    })
+
+
+    const [showModal, setShowModal] = useState(false);
+
     const [isLoading, toggleLoading] = useState(false);
 
     const onChangeHandler = (e) => {
         setInfo({
             ...info,
             [e.target.id]: e.target.value
-        })
+        });
+        validateField(e.target.id, e.target.value)
+    }
+
+    const validateField = (fieldName, value) => {
+        let emailValid = validation.email;
+        let firstnameValid = validation.firstname;
+        let lastnameValid = validation.lastname;
+        let phonenumberValid = validation.phoneNumber;
+        let tojValid = validation.typeOfJob;
+        let messageValid = validation.message;
+        switch (fieldName) {
+            case 'email':
+                emailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(value)
+                setValidation({
+                    ...validation,
+                    ['email']: emailValid
+                })
+                break;
+            case 'firstname':
+                firstnameValid = value.length > 0;
+                setValidation({
+                    ...validation,
+                    ['firstname']: firstnameValid
+                });
+                break;
+            case 'lastname':
+                lastnameValid = value.length > 0;
+                setValidation({
+                    ...validation,
+                    [fieldName]: lastnameValid
+                });
+                console.log(lastnameValid)
+                console.log(validation.lastname)
+                break;
+            case 'phoneNumber':
+                phonenumberValid = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(value)
+                setValidation({
+                    ...validation,
+                    [fieldName]: phonenumberValid
+                })
+                break;
+            case 'typeOfJob':
+                tojValid = value.length > 0;
+                setValidation({
+                    ...validation,
+                    ['typeOfJob']: tojValid
+                })
+                break;
+            case 'message':
+                messageValid = value.length > 0;
+                setValidation({
+                    ...validation,
+                    ['message']: messageValid
+                })
+                break;
+        }
     }
 
     const send = (e) => {
-        toggleLoading(true);
-        e.preventDefault()
-        const params = {
-            "from_email": info.email,
-            "reply_to": info.email,
-            "from_name": info.firstname + " " + info.lastname,
-            "message_html": info.message,
-            "number": info.phoneNumber.length > 0 ? info.phoneNumber : "No number provided",
-            "job_type": info.typeOfJob
+        if (!(validation.email && validation.firstname && validation.lastname && validation.phoneNumber && validation.typeOfJob && validation.message)) {
+            setShowModal(true)
+        }
+        else {
+            toggleLoading(true);
+            e.preventDefault()
+            const params = {
+                "from_email": info.email,
+                "reply_to": info.email,
+                "from_name": info.firstname + " " + info.lastname,
+                "message_html": info.message,
+                "number": info.phoneNumber.length > 0 ? info.phoneNumber : "No number provided",
+                "job_type": info.typeOfJob
+            }
+            emailjs.send('gmail', 'template_a23K7w3c', params, 'user_4IOyMIUtvLImbAjtsbKqc')
+                .then((result) => {
+                    setResponse("Successfully sent!");
+                    toggleLoading(false);
+                }, (error) => {
+                    setResponse("Something went wrong.");
+                    toggleLoading(false);
+                });
         }
         // recaptchaRef.current.execute()
+    }
 
-        emailjs.send('gmail', 'template_a23K7w3c', params, 'user_4IOyMIUtvLImbAjtsbKqc')
-            .then((result) => {
-                setResponse("Successfully sent!");
-                toggleLoading(false);
-            }, (error) => {
-                setResponse("Something went wrong.");
-                toggleLoading(false);
-            });
+    const modalCloseHandler = () => {
+        setShowModal(false);
     }
 
     let contact = null;
@@ -95,8 +173,20 @@ const ContactUs = (props) => {
 
     }
 
+    let errorMessages = null;
+    if (!validation.formValid) {
+        errorMessages = <div className = {classes.ErrorMessage}>
+            {!(validation.firstname && validation.lastname && validation.typeOfJob && validation.message)?<h3>Please fill in all details!</h3>: null}
+            {!validation.phoneNumber?<p>*Invalid phone number</p>: null}
+            {!validation.email?<p>*Invalid email</p>: null}
+        </div>
+    }
+
     return (
         <div className={classes.ContactUs}>
+            <Modal show={showModal} modalClosed={modalCloseHandler}>
+                {errorMessages}
+            </Modal>
 
             {contact}
 
