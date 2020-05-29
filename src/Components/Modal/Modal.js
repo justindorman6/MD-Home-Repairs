@@ -20,9 +20,4 @@ const modal = props => {
     )
 }
 
-export default React.memo(modal, (prevProps, nextProps) =>
-    nextProps.show === prevProps.show &&
-    nextProps.children === prevProps.children);
-    //only update modal when the props are changed
-    //checking if the props are equal 
-    //replace with should component update
+export default modal;

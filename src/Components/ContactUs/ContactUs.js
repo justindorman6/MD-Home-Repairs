@@ -178,7 +178,7 @@ const ContactUs = (props) => {
         errorMessages = <div className = {classes.ErrorMessage}>
             {!(validation.firstname && validation.lastname && validation.typeOfJob && validation.message)?<h3>Please fill in all details!</h3>: null}
             {!validation.phoneNumber?<p>*Invalid phone number</p>: null}
-            {!validation.email?<p>*Invalid email</p>: null}
+            {!validation.email?<p>*Invalid email address</p>: null}
         </div>
     }
 
