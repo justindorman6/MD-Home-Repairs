@@ -8,7 +8,7 @@ import After2 from '../../assets/images/after2.jpg'
 
 import Before3 from '../../assets/images/before3.png'
 import After3 from '../../assets/images/after3.png'
-const BeforeandAfter = () => {
+const BeforeandAfter = (props) => {
 
     const [state, setState] = useState({
         one: false,
@@ -23,6 +23,12 @@ const BeforeandAfter = () => {
     return (
         <div className={classes.BeforeandAfter} id="ourwork">
             <div className={classes.Container}>
+
+                {props.mobile ?
+                   
+                    <h1>Our Work</h1>
+                    : null}
+
 
                 <div className={classes.ImageContainer}>
                     <div className={classes.SubImage}>
@@ -55,10 +61,11 @@ const BeforeandAfter = () => {
                         <button className={state.three ? classes.AfterButton_select : classes.AfterButton} onClick={() => toggle("three", true)}>After</button>
                     </div>
                 </div>
-                <div>
+
+                {!props.mobile ? <div>
                     <h1>Our Work</h1>
                     <p>These are some examples of our exemplary work. You can just sit back and relax while we do all the hard work.</p>
-                </div>
+                </div> : null}
 
             </div>
         </div>

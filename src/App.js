@@ -29,11 +29,11 @@ const App = () => {
     <div className={classes.App}>
       <Header visible={visible} showSideNav={() => setVisible(true)} mobile={mobile} />
       <SideNav closeNav={() => setVisible(false)} visible={visible} />
-      <HeroSection />
-      <ServicesSection />
-      <BeforeandAfter />
-      <Profile />
-      <ContactUs />
+      <HeroSection mobile = {mobile}/>
+      <ServicesSection mobile = {mobile}/>
+      <BeforeandAfter mobile = {mobile}/>
+      <Profile mobile = {mobile}/>
+      <ContactUs mobile = {mobile}/>
     </div>
   );
 }

@@ -1,177 +1,234 @@
 .BeforeandAfter {
-    height: 600px;
-    width: 100vw;
-    overflow: hidden;
-    background-color: #F9FAFC;
-    display: flex;
+	height: 600px;
+	width: 100vw;
+	overflow: hidden;
+	background-color: #f9fafc;
+	display: flex;
 }
 
 .Container {
-    display: flex;
-    margin-left: 100px;
+	display: flex;
+	margin-left: 100px;
 }
 
-.Container p{
-    width: 300px;
-    margin-left: 100px;
-    line-height: 26px;
-    font-size: 16px;
-    color: rgb(36, 36, 36);
+.Container p {
+	width: 300px;
+	margin-left: 100px;
+	line-height: 26px;
+	font-size: 16px;
+	color: rgb(36, 36, 36);
 }
-.Container h1{
-    margin-top: 150px;
-    margin-left: 100px;
+.Container h1 {
+	margin-top: 150px;
+	margin-left: 100px;
 }
 
 .ImageContainer {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    justify-content: center;
-    transition: all 0.2s linear;
-    margin-right: 28px;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	justify-content: center;
+	transition: all 0.2s linear;
+	margin-right: 28px;
 }
 
-.SubImage{
-    height: 304px;
+.SubImage {
+	height: 304px;
 }
 
 .ImageContainer img {
-    transition: all 0.2s linear;
-    width: 400px;
-    border-radius: 10px;
-    /* border: 2px solid #76A328; */
+	transition: all 0.2s linear;
+	width: 400px;
+	border-radius: 10px;
+	/* border: 2px solid #76A328; */
 }
 
-.BeforeIMagethree{
-    height: 304px !important;
-    width: 100% !important;
+.BeforeIMagethree {
+	height: 304px !important;
+	width: 100% !important;
 }
 
 .Buttons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
 }
 
 .BeforeButton {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background-color: #fff;
-    border: 1px solid #76A328;
-    color: #76A328;
-    outline: none;
-    cursor: pointer;
-    height: 40px;
-    width: 100px;
-    border-right: 0;
-    transition: all 0.2s linear;
-    font-size: 15px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	background-color: #fff;
+	border: 1px solid #76a328;
+	color: #76a328;
+	outline: none;
+	cursor: pointer;
+	height: 40px;
+	width: 100px;
+	border-right: 0;
+	transition: all 0.2s linear;
+	font-size: 15px;
 }
 
 .AfterButton {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-color: #fff;
-    border: 1px solid #76A328;
-    color: #76A328;
-    outline: none;
-    cursor: pointer;
-    height: 40px;
-    width: 100px;
-    border-left: 0;
-    transition: all 0.2s linear;
-    font-size: 15px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-color: #fff;
+	border: 1px solid #76a328;
+	color: #76a328;
+	outline: none;
+	cursor: pointer;
+	height: 40px;
+	width: 100px;
+	border-left: 0;
+	transition: all 0.2s linear;
+	font-size: 15px;
 }
 
 .BeforeButton_select {
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background-color: #76A328;
-    border: 1px solid #76A328;
-    color: white;
-    outline: none;
-    cursor: pointer;
-    height: 40px;
-    width: 100px;
-    border-right: 0;
-    transition: all 0.2s linear;
-    font-size: 15px;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+	background-color: #76a328;
+	border: 1px solid #76a328;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	height: 40px;
+	width: 100px;
+	border-right: 0;
+	transition: all 0.2s linear;
+	font-size: 15px;
 }
 
 .AfterButton_select {
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-color: #76A328ff;
-    border: 1px solid #76A328;
-    color: white;
-    outline: none;
-    cursor: pointer;
-    height: 40px;
-    width: 100px;
-    border-left: 0;
-    transition: all 0.2s linear;
-    font-size: 15px;
+	border-top-right-radius: 50px;
+	border-bottom-right-radius: 50px;
+	background-color: #76a328ff;
+	border: 1px solid #76a328;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	height: 40px;
+	width: 100px;
+	border-left: 0;
+	transition: all 0.2s linear;
+	font-size: 15px;
 }
 
 @media only screen and (max-width: 1400px) {
-    .BeforeandAfter {
-        height: 500px !important;
-    }
-    .BeforeButton {
-        width: 80px;
+	.BeforeandAfter {
+		height: 500px !important;
+	}
+	.BeforeButton {
+		width: 80px;
+	}
+
+	.AfterButton {
+		width: 80px;
+	}
+
+	.BeforeButton_select {
+		width: 80px;
+	}
+
+	.AfterButton_select {
+		width: 80px;
+	}
+
+	.Container {
+		margin-left: 50px;
+	}
+
+	.Container p {
+		width: 200px;
+		margin-left: 40px;
+		line-height: 26px;
+		font-size: 14px;
+		color: rgb(36, 36, 36);
+	}
+	.Container h1 {
+		margin-top: 150px;
+		margin-left: 40px;
+	}
+
+	.ImageContainer {
+		display: flex;
+		flex-direction: column;
+		width: 304px;
+		justify-content: center;
+		transition: all 0.2s linear;
+		margin-right: 28px;
+	}
+
+	.SubImage {
+		height: 228px;
+	}
+
+	.ImageContainer img {
+		transition: all 0.2s linear;
+		width: 304px;
+		border-radius: 10px;
+		/* border: 2px solid #76A328; */
+	}
+
+	.BeforeIMagethree {
+		height: 228px !important;
+		width: 100% !important;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.BeforeandAfter {
+		height: 100% !important;
+	}
+	.Container {
+		flex-direction: column;
+		margin-left: 30px;
+		height: 100%;
+	}
+
+	.BeforeButton {
+		width: 80px;
+	}
+
+	.AfterButton {
+		width: 80px;
+	}
+
+	.BeforeButton_select {
+		width: 80px;
+	}
+
+	.AfterButton_select {
+		width: 80px;
     }
     
-    .AfterButton {
-        width: 80px;
-    }
-    
-    .BeforeButton_select {
-        width: 80px;
-    }
-    
-    .AfterButton_select {
-        width: 80px;
-    }
-    
-    .Container {
-        margin-left: 50px;
-    }
-    
-    .Container p{
-        width: 200px;
-        margin-left: 40px;
-        line-height: 26px;
-        font-size: 14px;
-        color: rgb(36, 36, 36);
-    }
-    .Container h1{
-        margin-top: 150px;
-        margin-left: 40px;
-    }
-    
-    .ImageContainer {
-        display: flex;
-        flex-direction: column;
-        width: 304px;
-        justify-content: center;
-        transition: all 0.2s linear;
-        margin-right: 28px;
-    }
-    
-    .SubImage{
+	.Container h1 {
+        margin-top: 10px;
+		margin-left: 0px;
+	}
+
+	.ImageContainer {
+		display: flex;
+		flex-direction: column;
+		width: 304px;
+		justify-content: center;
+		transition: all 0.2s linear;
+	}
+
+	.SubImage {
         height: 228px;
-    }
-    
-    .ImageContainer img {
-        transition: all 0.2s linear;
-        width: 304px;
-        border-radius: 10px;
-        /* border: 2px solid #76A328; */
-    }
-    
-    .BeforeIMagethree{
-        height: 228px !important;
-        width: 100% !important;
-    }
+        margin-top: 10px;
+	}
+
+	.ImageContainer img {
+		transition: all 0.2s linear;
+		width: 304px;
+		border-radius: 10px;
+		/* border: 2px solid #76A328; */
+	}
+
+	.BeforeIMagethree {
+		height: 228px !important;
+		width: 100% !important;
+	}
 }
