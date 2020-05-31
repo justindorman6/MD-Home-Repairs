@@ -183,7 +183,7 @@ const ContactUs = (props) => {
     }
 
     return (
-        <div className={classes.ContactUs}>
+        <div className={classes.ContactUs} id ="contactus">
             <Modal show={showModal} modalClosed={modalCloseHandler}>
                 {errorMessages}
             </Modal>

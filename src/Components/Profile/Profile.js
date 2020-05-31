@@ -1,9 +1,10 @@
 import React from 'react'
 import classes from './Profile.module.css'
 import profile_pic from '../../assets/images/md_profile.jpg';
+
 const Profile = () => {
     return (
-                <div className={classes.Profile_container}>
+                <div className={classes.Profile_container} id="profile">
                    
                     <div className={classes.Profile_description}>
                         <p>Amdy’s remarkable story of escaping a Civil War in Burundi as a little boy, surviving the dangerous forest where only he and 1 boy survived from a group of over 20 boys, fleeing to South Africa with the help of Doctors Without Borders, beyond the trauma and tragedy, building his new life in South Africa with the help of an adopting mother, successfully matriculating within 1 year with no formal education.

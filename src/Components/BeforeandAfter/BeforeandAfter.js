@@ -21,7 +21,7 @@ const BeforeandAfter = () => {
     }
     //false = before and true = after
     return (
-        <div className={classes.BeforeandAfter}>
+        <div className={classes.BeforeandAfter} id="ourwork">
             <div className={classes.Container}>
 
                 <div className={classes.ImageContainer}>
