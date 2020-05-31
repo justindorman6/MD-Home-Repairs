@@ -1,0 +1,82 @@
+.SideNav {
+    position: fixed;
+    width: 220px;
+    max-width: 70%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    background-color: #fff;
+    padding: 28px 0px;
+    transition: transform 0.3s ease-out;
+}
+
+@media (min-width: 500px) {
+    .SideNav{
+        display: none;
+    }
+    .Logo{
+        display: none;
+    }
+}
+
+.open {
+    transform: translateX(0);
+}
+
+.close {
+    transform: translateX(-100%);
+}
+
+.Contact {
+    height: 38px;
+    border-radius: 4px;
+    
+    width: 100%;
+    font-size: 15px;
+    background-color: #76A328;
+    color: white;
+    outline: none;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s linear;
+    margin:0;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 25px;
+}
+.Logo{
+    height: 90px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.Button {
+    margin-left: 20px;
+    margin-right: 15px;
+    width: 100%;
+    height: 38px;
+    font-size: 18px;
+    text-align: left;
+    background-color: #fff;
+    color: #76A328;
+    outline: none;
+    border: 0;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    margin:0;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+
+.NavButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
