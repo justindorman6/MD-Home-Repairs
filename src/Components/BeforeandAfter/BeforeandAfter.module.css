@@ -1,6 +1,6 @@
 .BeforeandAfter {
 	height: 600px;
-	width: 100vw;
+	width: 100%;
 	overflow: hidden;
 	background-color: #f9fafc;
 	display: flex;
@@ -112,6 +112,32 @@
 	border-left: 0;
 	transition: all 0.2s linear;
 	font-size: 15px;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+	.ImageContainer {
+		display: flex;
+		flex-direction: column;
+		width: 304px;
+		justify-content: center;
+		transition: all 0.2s linear;
+		margin-right: 28px;
+	}
+
+	.SubImage {
+		height: 228px;
+	}
+
+	.ImageContainer img {
+		transition: all 0.2s linear;
+		width: 304px;
+		border-radius: 10px;
+	}
+
+	.BeforeIMagethree {
+		height: 228px !important;
+		width: 100% !important;
+	}
 }
 
 @media only screen and (max-width: 1400px) {
