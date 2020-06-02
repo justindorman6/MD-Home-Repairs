@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './HeroSection.module.css'
 import HeroImage from '../../assets/images/tools.jpg'
-import Socials from '../Socials/Socials'
+// import Socials from '../Socials/Socials'
 const HeroSection = (props) => {
     return (
         <div className={classes.HeroSectionContainer}>
