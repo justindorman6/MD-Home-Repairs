@@ -1,12 +1,27 @@
-.Socials{
+.Socials_mobile{
     position: absolute;
     display: flex;
-    bottom: 20px;
-    right: 50px;
+    bottom: 70px;
+    left: 20px;
     align-items: center;
 }
 
-.Socials img{
+.Socials_desktop{
+    position: absolute;
+    display: flex;
+    bottom: 30px;
+    left: 50px;
+    align-items: center;
+}
+
+.Socials_desktop img{
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+    transition: all 0.2s linear;
+}
+
+.Socials_mobile img{
     height: 40px;
     margin-right: 10px;
     border-radius: 50%;
@@ -19,7 +34,7 @@
     transition: all 0.2s linear;
 }
 
-.Socials img:hover{
+.Socials_desktop img:hover{
     transition: all 0.2s linear;
-    box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.4);
+    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.4);
 }

@@ -198,7 +198,7 @@ const ContactUs = (props) => {
                 or if that does it do it for you please go look at our social media. You can contact us there as well.</p>
             </div> : null}
 
-            <Socials />
+            {!props.mobile ? <Socials /> : null}
         </div>
     )
 }

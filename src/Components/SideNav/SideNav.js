@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './SideNav.module.css'
 import Backdrop from '../Backdrop/Backdrop'
 import Logo from '../../assets/images/mdLogo.png'
+import Socials from '../Socials/Socials'
 const SideNav = (props) => {
 
     window.smoothScroll = (target) => {
@@ -17,12 +18,12 @@ const SideNav = (props) => {
         do { //find the top of target relatively to the container
             if (target === scrollContainer) break;
             targetY += target.offsetTop;
-        } while (target === target.offsetParent);
+        } while (target === target.offsetParent)
 
         const scroll = (c, a, b, i) => {
             i++; if (i > 20) return;
             c.scrollTop = a + (b - a) / 20 * i;
-            setTimeout(() => { scroll(c, a, b, i); }, 20);
+            setTimeout(() => { scroll(c, a, b, i) }, 20)
         }
         // start scrolling
         scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
@@ -35,6 +36,7 @@ const SideNav = (props) => {
     return (
         <>
             <Backdrop show={props.visible} clicked={props.closeNav} />
+
             <div className={navclasses.join(' ')}>
                 <img src={Logo} alt="logo" className={classes.Logo} />
                 <nav className={classes.NavButtons}>
@@ -43,6 +45,7 @@ const SideNav = (props) => {
                     <button className={classes.Button} onClick={() => window.smoothScroll(document.getElementById('profile'))}>Profile</button>
                     <button className={classes.Button} onClick={() => window.smoothScroll(document.getElementById('contactus'))}>Contact Us</button>
                 </nav>
+                <Socials mobile={true}/>
             </div>
         </>
     )

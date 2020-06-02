@@ -6,6 +6,7 @@ import BeforeandAfter from './Components/BeforeandAfter/BeforeandAfter'
 import Profile from './Components/Profile/Profile'
 import ContactUs from './Components/ContactUs/ContactUs'
 import SideNav from './Components/SideNav/SideNav'
+import Socials from './Components/Socials/Socials'
 import classes from './App.module.css'
 
 const App = () => {

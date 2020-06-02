@@ -1,11 +1,11 @@
 import React from 'react'
 import classes from './HeroSection.module.css'
 import HeroImage from '../../assets/images/tools.jpg'
-
+import Socials from '../Socials/Socials'
 const HeroSection = (props) => {
     return (
         <div className={classes.HeroSectionContainer}>
-            <img src={HeroImage} alt="hero"/>
+            <img src={HeroImage} alt="hero" />
             <div className={classes.Overlay}></div>
             <div className={classes.Headings}>
                 <h1>MD Home Repairs</h1>
