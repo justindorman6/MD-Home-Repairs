@@ -207,7 +207,11 @@
 @media only screen and (max-width: 500px) {
     .ContactUs {
         flex-direction: column;
-        padding: 0px 80px;
+        padding: 0px 40px;
         height: 600px !important;
+    }
+
+    .Form {
+        width: 80%;
     }
 }
