@@ -3,12 +3,12 @@ import classes from './ContactUs.module.css'
 import emailjs from 'emailjs-com';
 import Socials from '../Socials/Socials'
 import Spinner from '../../Components/Spinner/Spinner';
-import Recaptcha from 'react-google-invisible-recaptcha'
+// import Recaptcha from 'react-google-invisible-recaptcha'
 import Modal from '../../Components/Modal/Modal';
 
 
 const ContactUs = (props) => {
-    const recaptchaRef = React.createRef();
+    // const recaptchaRef = React.createRef();
     const [response, setResponse] = useState("")
 
     const [info, setInfo] = useState({
@@ -188,12 +188,12 @@ const ContactUs = (props) => {
                 {errorMessages}
             </Modal>
 
-            {props.mobile ? <h1> Contact Us</h1> : null}
+            {props.mobile ? <h1>Contact Us</h1> : null}
 
             {contact}
 
             {!props.mobile ? <div className={classes.Copy}>
-                <h1>ContactUs</h1>
+                <h1>Contact Us</h1>
                 <p>We are expecting your email so please do not hesitate to contact us through this channel or you may call on the number,
                 or if that does it do it for you please go look at our social media. You can contact us there as well.</p>
             </div> : null}
