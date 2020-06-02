@@ -80,6 +80,7 @@
 
 	.Title h3 {
 		margin: 0;
-		margin-top: 3px;
+		font-size: 14px;
+		padding-bottom: 4px;
 	}
 }
