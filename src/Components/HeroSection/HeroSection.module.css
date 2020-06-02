@@ -8,18 +8,58 @@
     justify-content: center;
     z-index: 1;
     overflow: hidden;
+    position: relative;
 }
 
 .HeroSectionContainer h1 {
     margin-bottom: 0px;
-    font-size: 40px;
+    font-size: 50px;
     font-weight:600;
+    color: #fff;
+}
+
+.HeroSectionContainer p{
+    color: #fff;
+    font-size: 22px;
+}
+
+.Headings{
+    width: 100%;
+    height: 350px;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.Overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
+
+.HeroSectionContainer img{
+    width:100%;
+    margin-top: 70px;
 }
 
 @media only screen and (max-width: 500px) {
     .HeroSectionContainer h1 {
         margin-bottom: 0px;
-        font-size: 30px;
+        font-size: 32px;
         font-weight:600;
+    }
+    .HeroSectionContainer img{
+        width:100%;
+        margin-top: 0;
+    }
+    .HeroSectionContainer {
+        height: 100%;
     }
 }
