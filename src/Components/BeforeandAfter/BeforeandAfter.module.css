@@ -179,6 +179,8 @@
 @media only screen and (max-width: 500px) {
 	.BeforeandAfter {
 		height: 100% !important;
+		padding-bottom: 30px;
+		padding-top: 15px;
 	}
 	.Container {
 		flex-direction: column;
@@ -213,6 +215,7 @@
 		width: 304px;
 		justify-content: center;
 		transition: all 0.2s linear;
+		padding-bottom: 10px;
 	}
 
 	.SubImage {
