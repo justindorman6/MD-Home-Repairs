@@ -41,3 +41,24 @@
         margin-right: 20px;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .Container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .ServicesSection{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 4% auto;
+        margin-left: 15px;
+        column-count: 5;
+    }
+    .Copy{
+        margin-top: 0px;
+        margin-left:45px;
+    }
+}

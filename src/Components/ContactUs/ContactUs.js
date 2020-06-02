@@ -175,26 +175,29 @@ const ContactUs = (props) => {
 
     let errorMessages = null;
     if (!validation.formValid) {
-        errorMessages = <div className = {classes.ErrorMessage}>
-            {!(validation.firstname && validation.lastname && validation.typeOfJob && validation.message)?<h3>Please fill in all details!</h3>: null}
-            {!validation.phoneNumber?<p>*Invalid phone number</p>: null}
-            {!validation.email?<p>*Invalid email address</p>: null}
+        errorMessages = <div className={classes.ErrorMessage}>
+            {!(validation.firstname && validation.lastname && validation.typeOfJob && validation.message) ? <h3>Please fill in all details!</h3> : null}
+            {!validation.phoneNumber ? <p>*Invalid phone number</p> : null}
+            {!validation.email ? <p>*Invalid email address</p> : null}
         </div>
     }
 
     return (
-        <div className={classes.ContactUs} id ="contactus">
+        <div className={classes.ContactUs} id="contactus">
             <Modal show={showModal} modalClosed={modalCloseHandler}>
                 {errorMessages}
             </Modal>
 
+            {props.mobile ? <h1> Contact Us</h1> : null}
+
             {contact}
 
-            <div className={classes.Copy}>
+            {!props.mobile ? <div className={classes.Copy}>
                 <h1>ContactUs</h1>
                 <p>We are expecting your email so please do not hesitate to contact us through this channel or you may call on the number,
                 or if that does it do it for you please go look at our social media. You can contact us there as well.</p>
-            </div>
+            </div> : null}
+
             <Socials />
         </div>
     )

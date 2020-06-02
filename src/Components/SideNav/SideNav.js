@@ -38,11 +38,10 @@ const SideNav = (props) => {
             <div className={navclasses.join(' ')}>
                 <img src={Logo} alt="logo" className={classes.Logo} />
                 <nav className={classes.NavButtons}>
-                    <button className={classes.Contact} onClick={() => window.smoothScroll(document.getElementById('contactus'))}>Contact Us</button>
                     <button className={classes.Button} onClick={() => window.smoothScroll(document.getElementById('services'))}>Services offered</button>
                     <button className={classes.Button} onClick={() => window.smoothScroll(document.getElementById('ourwork'))}>Our Work</button>
                     <button className={classes.Button} onClick={() => window.smoothScroll(document.getElementById('profile'))}>Profile</button>
-
+                    <button className={classes.Button} onClick={() => window.smoothScroll(document.getElementById('contactus'))}>Contact Us</button>
                 </nav>
             </div>
         </>
