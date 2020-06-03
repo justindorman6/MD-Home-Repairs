@@ -162,19 +162,19 @@
 	}
 
 	.Container {
-		margin-left: 50px;
+		margin-left: 30px;
 	}
 
 	.Container p {
 		width: 200px;
-		margin-left: 40px;
+		margin-left: 20px;
 		line-height: 26px;
 		font-size: 14px;
 		color: rgb(36, 36, 36);
 	}
 	.Container h1 {
 		margin-top: 150px;
-		margin-left: 40px;
+		margin-left: 20px;
 	}
 
 	.ImageContainer {
