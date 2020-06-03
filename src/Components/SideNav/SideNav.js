@@ -19,7 +19,7 @@ const SideNav = (props) => {
             if (target === scrollContainer) break;
             targetY += target.offsetTop;
         } while (target === target.offsetParent)
-
+        targetY-=70
         const scroll = (c, a, b, i) => {
             i++; if (i > 20) return;
             c.scrollTop = a + (b - a) / 20 * i;

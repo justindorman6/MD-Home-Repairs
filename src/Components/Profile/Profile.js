@@ -4,11 +4,10 @@ import profile_pic from '../../assets/images/md_profile.jpg';
 
 const Profile = (props) => {
     return (
-
-            <div className = {classes.Container}>
+            <div className = {classes.Container} id="profile">
                 {props.mobile?<h1>About Me</h1>:null}
             
-                <div className={classes.Profile_container} id="profile">
+                <div className={classes.Profile_container} >
 
                     <div className={classes.Image_container}>
                         <div className={classes.SubImage}>

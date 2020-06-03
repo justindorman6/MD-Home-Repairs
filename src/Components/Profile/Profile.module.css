@@ -88,24 +88,25 @@
 
 @media only screen and (max-width: 500px) {
 	.Container {
-		height: 450px !important;
+		/* height: 450px !important; */
 		margin-bottom: 10px;
-		
+		padding-bottom: 0;
+		padding-top: 20px;
 	}
 	.Container h1 {
 		margin-left: 30px;
+		margin-bottom: 0;
 	}
 	.Profile_container {
 		margin-left: 20px;
 		margin-top: 0px;
+		padding-top: 0 !important;
 		height: 100%;
 		background-color: #fff;
 		display: flex;
 		justify-content: flex-end;
 		width: 100vw;
 		overflow: hidden;
-		padding-top: 40px;
-		padding-bottom: 50px;
 	}
 	.SubImage {
 		margin-left: 10px;
