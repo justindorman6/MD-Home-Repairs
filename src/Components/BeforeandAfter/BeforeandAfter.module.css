@@ -1,5 +1,5 @@
 .BeforeandAfter {
-	height: 600px;
+	height: 450px;
 	width: 100%;
 	overflow: hidden;
 	background-color: #f9fafc;
@@ -33,18 +33,19 @@
 }
 
 .SubImage {
-	height: 304px;
+	height: 220px;
 }
 
 .ImageContainer img {
 	transition: all 0.2s linear;
 	width: 400px;
 	border-radius: 10px;
+	height: 200px;
 	/* border: 2px solid #76A328; */
 }
 
 .BeforeIMagethree {
-	height: 304px !important;
+	height: 200px !important;
 	width: 100% !important;
 }
 
@@ -142,7 +143,7 @@
 
 @media only screen and (max-width: 1400px) {
 	.BeforeandAfter {
-		height: 500px !important;
+		height: 450px !important;
 	}
 	.BeforeButton {
 		width: 80px;
@@ -186,7 +187,7 @@
 	}
 
 	.SubImage {
-		height: 228px;
+		height: 220px;
 	}
 
 	.ImageContainer img {
@@ -197,7 +198,7 @@
 	}
 
 	.BeforeIMagethree {
-		height: 228px !important;
+		height: 200px !important;
 		width: 100% !important;
 	}
 }
@@ -245,7 +246,7 @@
 	}
 
 	.SubImage {
-        height: 228px;
+        height: 215px;
         margin-top: 10px;
 	}
 
@@ -257,7 +258,7 @@
 	}
 
 	.BeforeIMagethree {
-		height: 228px !important;
+		height: 200px !important;
 		width: 100% !important;
 	}
 }

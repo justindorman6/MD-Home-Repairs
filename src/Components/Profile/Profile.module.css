@@ -1,6 +1,11 @@
-.Profile_container {
+.Container {
 	height: 550px;
 	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+
+.Profile_container {
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
@@ -9,29 +14,51 @@
 }
 
 .Image_container {
-	margin-right: 210px;
-	margin-bottom: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.2s linear;
+}
+
+.Image_container h1 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 0px;
+}
+
+.Image_container p {
+	display: flex;
+	justify-content: center;
+}
+
+.SubImage {
+	margin-bottom: 10px;
 	border-radius: 50%;
-	height: 300px;
+	margin-left: 30px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	height: 280px;
 	width: 300px;
 	overflow: hidden;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	box-shadow: 0 5px 8px hsla(0, 0%, 0%, 0.2);
 }
 
-.Image_container img {
+.SubImage img {
 	height: 300px;
 }
 
 .Profile_description {
 	width: 1100px;
-	margin-right: 50px;
+	margin-left: 50px;
 	line-height: 26px;
 	font-size: 16px;
 	color: rgb(0, 0, 0);
 }
+
 
 .Heading {
 	margin-left: 130px;
@@ -47,24 +74,11 @@
 		width: 100vw;
 		overflow: hidden;
 	}
-	.Image_container {
-		margin-right: 80px;
-		margin-bottom: 30px;
-		border-radius: 100%;
-		height: 230px;
-		width: 230px;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		box-shadow: 0 5px 8px hsla(0, 0%, 0%, 0.2);
-	}
-	.Image_container img {
-		height: 230px;
-	}
+
 	.Profile_description {
 		width: 70%;
-		margin-right: 50px;
+		margin-left: 30px;
+		margin-right: 20px;
 		line-height: 22px;
 		font-size: 15px;
 		color: rgb(0, 0, 0);
@@ -72,9 +86,18 @@
 }
 
 @media only screen and (max-width: 500px) {
+	.Container {
+		height: 450px !important;
+		margin-bottom: 10px;
+	}
+
+	.Container h1 {
+		margin-left: 30px;
+	}
+
 	.Profile_container {
-        margin-top: 40px;
-        margin-left: 40px;
+		margin-left: 20px;
+		margin-top: 0px;
 		height: 100%;
 		background-color: #fff;
 		display: flex;
@@ -83,20 +106,15 @@
 		width: 100vw;
 		overflow: hidden;
 	}
-	.Image_container {
-		margin-right: 60px;
-		margin-bottom: 30px;
-		border-radius: 100%;
+
+	.SubImage {
+		margin-left: 10px;
 		height: 140px;
-		width: 240px;
-		overflow: hidden;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		box-shadow: 0 5px 8px hsla(0, 0%, 0%, 0.2);
+		width: 120px;
 	}
-	.Image_container img {
-		height: 230px;
+
+	.SubImage img {
+		height: 200px;
 	}
 	.Profile_description {
 		width: 80%;
@@ -104,5 +122,12 @@
 		line-height: 22px;
 		font-size: 15px;
 		color: rgb(0, 0, 0);
+	}
+
+	.Image_container h1 {
+		font-size: 20px;
+	}
+	.Image_container p {
+		font-size: 15px;
 	}
 }
