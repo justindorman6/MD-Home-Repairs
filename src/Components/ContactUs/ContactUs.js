@@ -113,7 +113,7 @@ const ContactUs = (props) => {
                 "number": info.phoneNumber.length > 0 ? info.phoneNumber : "No number provided",
                 "job_type": info.typeOfJob
             }
-            emailjs.send('gmail', 'template_a23K7w3c', params, 'user_4IOyMIUtvLImbAjtsbKqc')
+            emailjs.send('gmail', 'template_FUE9gYoo', params, ' user_x439iFQqtKGyZZ7j7wiwI')
                 .then((result) => {
                     setResponse("Successfully sent!");
                     toggleLoading(false);
