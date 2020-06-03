@@ -1,14 +1,16 @@
 .Container {
-	height: 550px;
+	height: 100%;
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
+	padding-top: 40px;
+	padding-bottom: 50px;
 }
 
 .Profile_container {
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: center;
 	width: 100vw;
 	overflow: hidden;
 }
@@ -59,22 +61,21 @@
 	color: rgb(0, 0, 0);
 }
 
-
 .Heading {
 	margin-left: 130px;
 }
 
 @media only screen and (max-width: 1400px) {
 	.Profile_container {
-		height: 550px;
+		height: 100%;
 		background-color: #fff;
 		display: flex;
-		align-items: center;
-		justify-content: flex-end;
+		justify-content: center;
 		width: 100vw;
 		overflow: hidden;
+		padding-top: 40px;
+		padding-bottom: 50px;
 	}
-
 	.Profile_description {
 		width: 70%;
 		margin-left: 30px;
@@ -89,30 +90,28 @@
 	.Container {
 		height: 450px !important;
 		margin-bottom: 10px;
+		
 	}
-
 	.Container h1 {
 		margin-left: 30px;
 	}
-
 	.Profile_container {
 		margin-left: 20px;
 		margin-top: 0px;
 		height: 100%;
 		background-color: #fff;
 		display: flex;
-		align-items: center;
 		justify-content: flex-end;
 		width: 100vw;
 		overflow: hidden;
+		padding-top: 40px;
+		padding-bottom: 50px;
 	}
-
 	.SubImage {
 		margin-left: 10px;
 		height: 140px;
 		width: 120px;
 	}
-
 	.SubImage img {
 		height: 200px;
 	}
@@ -123,7 +122,6 @@
 		font-size: 15px;
 		color: rgb(0, 0, 0);
 	}
-
 	.Image_container h1 {
 		font-size: 20px;
 	}
